@@ -5,7 +5,7 @@ class Module {
 	String title
 	String code
 	int credits
-	String lecturer
+	Lecturer lecturer
 	String course
 	String description
 
@@ -14,6 +14,6 @@ class Module {
 	code blank:false,nullable:false
 	credits blank:false,nullable:false, min:20, max:120
 	lecturer blank:false,nullable:false
-	description blank:false,nullable:false, max:5000, widget:'textarea'
+	description blank:false,nullable:false, maxSize:5000, widget:'textarea'
     }
 }
