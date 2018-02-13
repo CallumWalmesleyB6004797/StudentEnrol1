@@ -8,6 +8,9 @@ class Module {
 	Lecturer lecturer
 	String course
 	String description
+	String toString(){
+	return title
+	}
 
     static constraints = {
 	title blank:false,nullable:false

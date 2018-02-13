@@ -28,6 +28,8 @@ return title
 
 }
 
+static hasMany=[lecturers: Lecturer]
+
 static constraints = {
 title blank:false, nuallable:false
 department blank:false, nuallable:false

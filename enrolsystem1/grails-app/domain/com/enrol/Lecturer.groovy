@@ -8,8 +8,13 @@ String subject
 String lecturerEmail
 String office
 String bio
+String toString(){
 
-static hasMany=[modules:Module]
+return fullName
+}
+
+static hasMany=[modules:Module, courses:Course]
+static belongsTo=[Course]
 
     static constraints = {
 fullName blank:false, nullable:false

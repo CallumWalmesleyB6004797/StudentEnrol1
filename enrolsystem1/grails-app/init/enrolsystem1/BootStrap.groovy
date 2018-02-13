@@ -55,12 +55,26 @@ def lect1=new Lecturer(fullName:'Dr Steve Crossbar',
 			office:'Office-2211',
 			bio:'''Lorem ipsum dolor sit amet, ludus contentiones ut nam, quaeque dolores facillisi in nec''').save()
 
+def lect2=new Lecturer(fullName:'Dr Mike Peters',
+			post:'Lecturer',
+			lecturerEmail:'M.Peters@theUni.ac.uk',
+			subject:'Databases',
+			office:'Office-3311',
+			bio:'''Lorem ipsum dolor sit amet, ludus contentiones ut nam, quaeque dolores facillisi in nec''').save()
+
 def module1=new Module(title:'System Architectures',
 			code:'SYS234',
 			credits:'20',
 			lecturer:lect1,
 			course:'BSc Hon Computing',
 			description:'''I'm a description from the Module instance''').save()
+
+def module2=new Module(title:'Arts',
+			code:'ART343',
+			credits:'20',
+			lecturer:lect1,
+			course:'BSc Hon Fine Arts',
+			description:'''I'm a description from the Module Arts''').save()
 
 def student1=new Student(name:'Jane Armando',
 			studentID:'b38845',
@@ -80,6 +94,12 @@ def student2=new Student(name:'Scott Oliver',
 			password:'passyword',
 			course:course2).save()
 
+lect1.addToModules(module1)
+lect1.addToModules(module2)
+course1.addToLecturers(lect1)
+course1.addToLecturers(lect2)
+lect2.addToCourses(course1)
+lect2.addToCourses(course2)
 }
     def destroy = {
     }
