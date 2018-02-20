@@ -28,7 +28,7 @@ return title
 
 }
 
-static hasMany=[lecturers: Lecturer]
+static hasMany=[lecturers: Lecturer, students: Student, modules: Module]
 
 static constraints = {
 title blank:false, nuallable:false

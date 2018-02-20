@@ -6,7 +6,7 @@ class BootStrap {
 
     def init = { servletContext ->
 
-def tom=new Leader(fullName:'Dr Tom Donaldson',
+/*def tom=new Leader(fullName:'Dr Tom Donaldson',
 			department:'Computing',
 			subject:'Programming',
 			post:'Reader',
@@ -100,6 +100,8 @@ course1.addToLecturers(lect1)
 course1.addToLecturers(lect2)
 lect2.addToCourses(course1)
 lect2.addToCourses(course2)
+course1.addToStudents(student1)
+course1.addToStudents(student2)*/
 }
     def destroy = {
     }
